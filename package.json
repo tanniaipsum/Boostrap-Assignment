@@ -1,0 +1,12 @@
+{
+  "name": "inm320-bootstrapexe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --baseDir=\"Public\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
