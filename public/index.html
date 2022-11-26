@@ -14,8 +14,11 @@
 
   <!-- CSS and fonts -->
   <link rel="stylesheet" href="style.css">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <title>My dashboard</title>
 
@@ -27,13 +30,12 @@
 
       <!-- SIDEBAR -->
       <aside class="col-md-3 col-xl-2 p-0 bg-dark flex-shrink-1">
-        <!-- how to change the bg color to #363740 ??????? adding id inside aside css does not work-->
-        <!-- making it responsive -->
+
         <nav class="navbar navbar-expand-md flex-md-column flex-row align-items-center py-2 sticky-top">
           <div class="header-box px-2 pt-3 pb-4" id="sidebar">
             <img src="img/logo.png" alt="The company logo" class="img-fluid my-4 p-1 d-none d-md-block">
             <ul class="list-unstyled px-2">
-              <li class="active"><a href="#" class="text-decoration-none px-3 py-3 d-block"><i
+              <li class=""><a href="#" class="text-decoration-none text-muted px-3 py-3 d-block"><i
                     class="fa-solid fa-chart-pie me-2"></i> Overview </a></li>
               <li class=""><a href="#" class="text-decoration-none px-3 py-3 d-block"><i
                     class="fa-solid fa-ticket me-2"></i> Tickets </a></li>
@@ -56,12 +58,32 @@
       </aside>
 
       <!-- main -->
-      <main class="col-md-9 col-xl-10">
-
-
+      <main class="col-md-9 col-xl-10 p-4">
         <div class="container-fluid">
 
+          <!-- Nav -->
+          <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+
+                <div class="col-lg-8">
+                  <h4> Overview </h4>
+                </div>
+                
+                <div class="col-lg-4">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4">
+                      <p text-end> Franz Ferdinand</p>
+                      <img src="" alt="">
+                    </div> 
+                  </div>
+                </div>
+                
+            </div>
+          </nav>
+
+
           <!-- ROW 2 CARDS -->
+
           <!-- <div class="row">
             <div class="col-sm-3 px-3 py-3 border border-primary rounded" id="unresolved-60">
               <p>Unresolved</p>
@@ -88,64 +110,88 @@
             </div>
           </div> -->
 
-          <div class="container text-center">
-            <div class="row gx-5">
-              <div class="col">
-                <div class="p-3 border bg-light border border-primary rounded">
+            <div class="row my-4 text-center">
+              
+              <div class="col-sm-4 col-lg-3 gy-4">
+                <div class="p-3 border bg-light border border-primary text-primary rounded bg-white">
                   <p>Unresolved</p>
-                  <h3>60</h3>
+                  <h2>60</h2>
                 </div>
               </div>
-              <div class="col">
-                <div class="p-3 borders">Custom column padding</div>
+
+              <div class="col-sm-4 col-lg-3 gy-4">
+                <div class="p-3 border bg-light border rounded bg-white">
+                  <p class="text-secondary">Overdue</p>
+                  <h2>16</h2>
+                </div>
               </div>
-              <div class="col">
-                <div class="p-3 border">Custom column padding</div>
+
+              <div class="col-sm-4 col-lg-3 gy-4">
+                <div class="p-3 border bg-light border rounded bg-white">
+                  <p class="text-secondary">Open</p>
+                  <h2>24</h2>
+                </div>
               </div>
-              <div class="col">
-                <div class="p-3 border">Custom column padding</div>
+
+              <div class="col-sm-4 col-lg-3 gy-4">
+                <div class="p-3 border bg-light border rounded bg-white">
+                  <p class="text-secondary">On hold</p>
+                  <h2>56</h2>
+                </div>
               </div>
+
             </div>
-          </div>
+          
 
           <!-- ROW 3  -->
-          <div class="row border">
+          <div class="row bg-white border rounded p-4 align-items-center my-4">
+
             <!-- GRAPHS -->
-            <div class="col-8">
-              <h5>Today's trend</h5>
-              <p>as of 25 May 2019, 09:41 PM</p>
-              <img src="img/graph.png" alt="The dummy graph" class="img-fluid d-none d-md-block">
+            <div class="col-sm-4 col-lg-8">
+              <div class="row">
+                <h4>Today's trend</h4>
+                <p class="text-secondary">as of 25 May 2019, 09:41 PM</p>
+              </div>
+
+              <div class="row">
+                <img src="img/graph.png" alt="The dummy graph" class="img-fluid">
+              </div>
+              
             </div>
+
             <!-- STATS -->
-            <div class="col-4 text-center ">
-              <div class="row border border-primary">
-                <p>On hold</p>
-                <h5>64</h5>
+            <div class="col-lg-4 col-sm- 4 text-center border-start ">
+              <div class="row p-3 border-bottom">
+                <p class="text-secondary">Resolved</p>
+                <h5>449</h5>
               </div>
-              <div class="row border border-primary">
-                <p>On hold</p>
-                <h5>64</h5>
+              <div class="row p-3 border-bottom">
+                <p class="text-secondary">Received</p>
+                <h5>426</h5>
               </div>
-              <div class="row border border-primary">
-                <p>On hold</p>
-                <h5>64</h5>
+              <div class="row p-3 border-bottom">
+                <p class="text-secondary">Average first response time</p>
+                <h5>33m</h5>
               </div>
-              <div class="row border border-primary">
-                <p>On hold</p>
-                <h5>64</h5>
+              <div class="row p-3 border-bottom">
+                <p class="text-secondary">Average response time</p>
+                <h5>3h 8m</h5>
               </div>
-              <div class="row border border-primary">
-                <p>On hold</p>
-                <h5>64</h5>
+              <div class="row p-3">
+                <p class="text-secondary">Resolution within SLA</p>
+                <h5>94%</h5>
               </div>
 
             </div>
           </div>
 
+
+          
           <!-- ROW 4 -->
+          
           <!-- TICKETS  -->
-          <div class="row border">
-            <div class="col-md-6">
+          <div class="row gy-4">
+            <div class="col-md-6 bg-white border rounded p-4">
               <div class="row">
 
                 <div class="col-8">
@@ -155,71 +201,91 @@
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <a href="#" class="stretched-link">View all</a>
+                  <p class="text-primary"> View All </p>
                 </div>
 
 
               </div>
 
-              <table class="table border">
+              <table class="table">
                 <tbody>
                   <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="fw-semibold">Waiting on feature request</td>
+                    <td class="text-end text-secondary ">4396</td>
                   </tr>
+                  
                   <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="fw-semibold">Awaiting customer response</td>
+                    <td class="text-end text-secondary ">1004</td>
                   </tr>
+                  
                   <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="fw-semibold">Awaiting developer fix</td>
+                    <td class="text-end text-secondary ">923</td>
                   </tr>
+
+                  <tr>
+                    <td class="fw-semibold">Waiting on feature request</td>
+                    <td class="text-end text-secondary ">280</td>
+                  </tr>
+
                 </tbody>
               </table>
             </div>
 
-            <!-- TASKS -->
-            <div class="col-md-6">
+          <!-- TASKS -->
+            <div class="col-md-6 bg-white border rounded p-4">
               <div class="row">
 
                 <div class="col-8">
                   <h5> Tasks</h5>
-                  <p>Today</p>
+                  <div class="row">
+                    <p class="text-muted fw-normal">Today</p>
+                  </div>
                 </div>
                 <div class="col-4 text-end">
-                  <a href="#" class="stretched-link">View all</a>
+                  <p class="text-primary"> View details </p>
                 </div>
+
 
               </div>
 
-              <table class="table border">
+              <table class="table">
                 <tbody>
+
                   <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="fw-normal text-black-50">Create new task</td>
+                    <td class="text-end"><span class="badge text-bg-light p-2 text-secondary fw-bold">+</span></td>
                   </tr>
+
                   <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="align-items-center">
+                        <input class="form-check-input" type="checkbox" value=""> Finish ticket update
+                    </td>
+                    <td class="text-end"><span class="badge text-bg-warning p-2 text-uppercase text-white ">Urgent</span></td>
                   </tr>
+                  
                   <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-
+                    <td class="align-items-center">
+                        <input class="form-check-input" type="checkbox" value=""> Create new ticket example
+                    </td>
+                    <td class="text-end"><span class="badge text-bg-success p-2 text-uppercase text-white">New</span></td>
                   </tr>
+                  
+                  <tr>
+                    <td class="align-items-center">
+                        <input class="form-check-input" type="rcheckbox" value=""> Update ticket report
+                    </td>
+                    <td class="text-end"><span class="badge text-bg-light p-2 text-uppercase text-secondary ">Default</span></td>
+                  </tr>
+
+
+
                 </tbody>
               </table>
             </div>
+            
+            
 
           </div>
 
