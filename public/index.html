@@ -26,10 +26,11 @@
 
 <body>
   <div class="container-fluid">
+   
     <div class="row">
 
       <!-- SIDEBAR -->
-      <aside class="col-md-3 col-xl-2 p-0 bg-dark flex-shrink-1">
+      <aside class="col-md-3 col-xl-2 p-0 bg-dark flex-shrink-1 hidden-mobile">
 
         <nav class="navbar navbar-expand-md flex-md-column flex-row align-items-center py-2 sticky-top">
           <div class="header-box px-2 pt-3 pb-4" id="sidebar">
@@ -62,28 +63,39 @@
         <div class="container-fluid">
 
           <!-- Nav -->
-          <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
+          <header class="container">
+            <div class="row pt-4">
+              <h2 class="col-8 col-lg-8">
+                Overview
+              </h2>
 
-                <div class="col-lg-8">
-                  <h4> Overview </h4>
-                </div>
-                
-                <div class="col-lg-4">
-                  <div class="row align-items-center">
-                    <div class="col-lg-4">
-                      <p text-end> Franz Ferdinand</p>
-                      <img src="" alt="">
-                    </div> 
+              <section class="col-lg-3 col-4 hidden-profile">
+                <div class="row text-muted">
+                  <div class="hstack gap-4">
+                    <div class="bg-light ms-auto">
+                      <div class="col-4">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                    </div>
+                    <div class="bg-light ms-auto">
+                      <div class="col-4">
+                        <i class="fa-solid fa-bell"></i>
+                      </div>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="text-start">Franz Ferdinand</div>
                   </div>
                 </div>
-                
+              </section>
+
+              
+
             </div>
-          </nav>
+
+          </header>
 
 
-          <!-- ROW 2 CARDS -->
-
+          <!-- ROW 2 CARDS trial error -->
           <!-- <div class="row">
             <div class="col-sm-3 px-3 py-3 border border-primary rounded" id="unresolved-60">
               <p>Unresolved</p>
@@ -160,7 +172,7 @@
             </div>
 
             <!-- STATS -->
-            <div class="col-lg-4 col-sm- 4 text-center border-start ">
+            <div class="col-lg-4 col-sm- 4 text-center border-start">
               <div class="row p-3 border-bottom">
                 <p class="text-secondary">Resolved</p>
                 <h5>449</h5>
@@ -190,7 +202,9 @@
           <!-- ROW 4 -->
           
           <!-- TICKETS  -->
-          <div class="row gy-4">
+          <div class="row gy-4 gx-4">
+            <!-- I am not sure why the gutter did not work in here. I have put gx-4 on the parents but it did not work. -->
+            <!-- The gx not working but the gy does -->
             <div class="col-md-6 bg-white border rounded p-4">
               <div class="row">
 
@@ -274,7 +288,7 @@
                   
                   <tr>
                     <td class="align-items-center">
-                        <input class="form-check-input" type="rcheckbox" value=""> Update ticket report
+                        <input class="form-check-input" type="checkbox" value=""> Update ticket report
                     </td>
                     <td class="text-end"><span class="badge text-bg-light p-2 text-uppercase text-secondary ">Default</span></td>
                   </tr>

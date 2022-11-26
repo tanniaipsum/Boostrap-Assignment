@@ -15,3 +15,20 @@ td {
   font-family: 'Mulish', sans-serif;
   font-weight: 300;
 }
+
+@media only screen and (max-width: 720px) {   
+  .hidden-mobile {
+    display: none;
+  }
+
+  .hidden-profile {
+    display: none;
+  }
+
+  /* .border-start {
+    display: none;
+  } */
+
+  /* If I acticate the border start class, it gets rid the whole thing on mobile. How do we modify this or to turn off border-start on xs layout? */
+  /* I have tried adding other customised class but it did not work */
+}
